@@ -1,2 +1,3 @@
-# proga
-zadania po proge
+# infa_2020_bugrova
+it's a test project)
+
