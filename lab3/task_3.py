@@ -6,7 +6,7 @@ FPS = 30
 screen = pygame.display.set_mode((400, 500))
 
 
-def Cat (n,x,y, eye_color, color, flipbool):
+def Cat(n, x, y, eye_color, color, flipbool):
     kitty = pygame.Surface((500, 600), pygame.SRCALPHA)
  #tail
     chvost = pygame.Surface((600, 600), pygame.SRCALPHA)
@@ -46,26 +46,26 @@ def Cat (n,x,y, eye_color, color, flipbool):
     shine2= pygame.transform.rotate(shine2, 330)
     kitty.blit(shine2, (-225, 130))
  #mouth
-    polygon(kitty, (255, 100, 100), [(95,287), (105,287),
-                               (100,292)])
-    polygon(kitty, (0, 0, 0), [(95,287), (105,287),
-                               (100,292)], 1)
+    polygon(kitty, (255, 100, 100), [(95, 287), (105, 287),
+                               (100, 292)])
+    polygon(kitty, (0, 0, 0), [(95, 287), (105, 287),
+                               (100, 292)], 1)
     line(kitty, (0, 0, 0), [100, 292], [100, 302], 1)
-    arc (kitty, (0, 0, 0), (100, 297, 15, 10), 3.14, 6.28,1)
-    arc (kitty, (0, 0, 0), (86, 297, 15, 10), 3.14, 6.28,1)
+    arc(kitty, (0, 0, 0), (100, 297, 15, 10), 3.14, 6.28, 1)
+    arc(kitty, (0, 0, 0), (86, 297, 15, 10), 3.14, 6.28, 1)
  #ears
-    polygon(kitty, color, [(65,245), (90,230),
-                               (72,215)])
-    polygon(kitty, (0, 0, 0), [(65,245), (90,230),
-                               (72,215)],1)
-    polygon(kitty, (255, 100, 100), [(70,237), (83,228),
-                               (74,225)])
-    polygon(kitty, (0, 0, 0), [(70,237), (83,228),
-                               (74,225)],1)                               
-    polygon(kitty, color, [(135,245), (110,230),
-                               (128,215)])
-    polygon(kitty, (0, 0, 0), [(135,245), (110,230),
-                               (128,215)],1)
+    polygon(kitty, color, [(65, 245), (90, 230),
+                               (72, 215)])
+    polygon(kitty, (0, 0, 0), [(65, 245), (90, 230),
+                               (72, 215)], 1)
+    polygon(kitty, (255, 100, 100), [(70, 237), (83, 228),
+                               (74, 225)])
+    polygon(kitty, (0, 0, 0), [(70, 237), (83, 228),
+                               (74, 225)], 1)                               
+    polygon(kitty, color, [(135, 245), (110, 230),
+                               (128, 215)])
+    polygon(kitty, (0, 0, 0), [(135, 245), (110, 230),
+                               (128, 215)], 1)
     polygon(kitty, (255, 100, 100), [(130,237), (117,228),
                                (126,225)])
     polygon(kitty, (0, 0, 0), [(130,237), (117,228),
@@ -96,23 +96,23 @@ def Cat (n,x,y, eye_color, color, flipbool):
     screen.blit(kitty, (x, y))
     
     
-def Ball (n,x,y, color, flipbool):
+def Ball(n, x, y, color, flipbool):
  #draw
     balls = pygame.Surface((500, 600), pygame.SRCALPHA)
     circle(balls, color, (300, 425), 40)
     circle(balls, (0, 0, 0), (300, 425), 40, 1)
-    arc (balls, (0, 0, 0), (283, 422, 20, 60), 1.6, 3.2, 1)
-    arc (balls, (0, 0, 0), (273, 414, 35, 65), 1.6, 3.2, 1)
-    arc (balls, (0, 0, 0), (293, 430, 15, 55), 1.6, 3.2, 1)
-    arc (balls, (0, 0, 0), (270, 410, 40, 60), 0, 1.5, 1)
-    arc (balls, (0, 0, 0), (280, 400, 50, 60), 0, 1.5, 1)
-    arc (balls, (0, 0, 0), (280, 400, 30, 20), 0.3, 1.57, 1)
-    arc (balls, (0, 0, 0), (310, 378, 50, 60), 3.2, 3.9, 1)
-    arc (balls, (0, 0, 0), (310, 428, 10, 30), 0.3, 1.57, 1)
-    arc (balls, color, (260, 445, 40, 20), 3.14, 6.29, 1)
-    arc (balls, color, (230, 450, 30, 10), 0, 3.15, 1)
-    arc (balls, color, (210, 449, 20, 10), 3.14, 6.29, 1)
-    arc (balls, color, (190, 449, 20, 10), 0, 3.15, 1)
+    arc(balls, (0, 0, 0), (283, 422, 20, 60), 1.6, 3.2, 1)
+    arc(balls, (0, 0, 0), (273, 414, 35, 65), 1.6, 3.2, 1)
+    arc(balls, (0, 0, 0), (293, 430, 15, 55), 1.6, 3.2, 1)
+    arc(balls, (0, 0, 0), (270, 410, 40, 60), 0, 1.5, 1)
+    arc(balls, (0, 0, 0), (280, 400, 50, 60), 0, 1.5, 1)
+    arc(balls, (0, 0, 0), (280, 400, 30, 20), 0.3, 1.57, 1)
+    arc(balls, (0, 0, 0), (310, 378, 50, 60), 3.2, 3.9, 1)
+    arc(balls, (0, 0, 0), (310, 428, 10, 30), 0.3, 1.57, 1)
+    arc(balls, color, (260, 445, 40, 20), 3.14, 6.29, 1)
+    arc(balls, color, (230, 450, 30, 10), 0, 3.15, 1)
+    arc(balls, color, (210, 449, 20, 10), 3.14, 6.29, 1)
+    arc(balls, color, (190, 449, 20, 10), 0, 3.15, 1)
  #blit
     if flipbool:
         balls= pygame.transform.flip(balls, True, False)
@@ -120,13 +120,13 @@ def Ball (n,x,y, color, flipbool):
     screen.blit(balls, (x, y))
 
     
-def Window (n, x, y, color1, color2):
+def Window(n, x, y, color1, color2):
     windows = pygame.Surface((500, 600), pygame.SRCALPHA)
-    rect (windows, color1, (200, 50, 100, 160))
-    rect (windows, color2, (205, 55, 40, 30))
-    rect (windows, color2, (255, 55, 40, 30))
-    rect (windows, color2, (205, 95, 40, 110))
-    rect (windows, color2, (255, 95, 40, 110))
+    rect(windows, color1, (200, 50, 100, 160))
+    rect(windows, color2, (205, 55, 40, 30))
+    rect(windows, color2, (255, 55, 40, 30))
+    rect(windows, color2, (205, 95, 40, 110))
+    rect(windows, color2, (255, 95, 40, 110))
     windows= pygame.transform.scale(windows, (int(500*n), int(600*n)))
     screen.blit(windows, (x, y))
 
@@ -134,26 +134,26 @@ def Window (n, x, y, color1, color2):
 rect(screen, (210,179,130), (0, 0, 400, 500))
 rect(screen, (150, 130, 100), (0, 250, 400, 300))
  #windows
-Window (1, 0, 0, (255, 255, 255), (100, 170, 200))
-Window (1, -150, 0, (255, 255, 255), (100, 170, 200))
-Window (1, -300, 0, (255, 255, 255), (100, 170, 200))
-Window (1, 150, 0, (255, 255, 255), (100, 170, 200))
+Window(1, 0, 0, (255, 255, 255), (100, 170, 200))
+Window(1, -150, 0, (255, 255, 255), (100, 170, 200))
+Window(1, -300, 0, (255, 255, 255), (100, 170, 200))
+Window(1, 150, 0, (255, 255, 255), (100, 170, 200))
  #balls
-Ball (1, -130, 0, (190, 190, 220), False)
-Ball (0.4, 0, 100, (190, 190, 220), False)
-Ball (0.3, 0, 270, (190, 190, 220), False)
-Ball (0.6, 120, 120, (190, 190, 220), True)
-Ball (0.4, 230, 190, (190, 190, 220), True)
-Ball (0.6, 210, 185, (190, 190, 220), True)
-Ball (0.3, 180, 350, (190, 190, 220), False)
+Ball(1, -130, 0, (190, 190, 220), False)
+Ball(0.4, 0, 100, (190, 190, 220), False)
+Ball(0.3, 0, 270, (190, 190, 220), False)
+Ball(0.6, 120, 120, (190, 190, 220), True)
+Ball(0.4, 230, 190, (190, 190, 220), True)
+Ball(0.6, 210, 185, (190, 190, 220), True)
+Ball(0.3, 180, 350, (190, 190, 220), False)
  #cats
-Cat (0.2, 300, 320, (0, 120, 0), (220, 130, 30), True)
-Cat (0.2, 0, 210, (0, 120, 0), (220, 130, 30), True)
-Cat (0.2, 220, 380, (0, 120, 0), (220, 130, 30), False)
-Cat (0.5, 200, 150, (0, 120, 0), (220, 130, 30), False)
-Cat (0.5, -40, 190, (0, 100, 190), (100, 100, 100), True)
-Cat (0.2, 0, 390, (0, 100, 190), (100, 100, 100), True)
-Cat (0.2, 300, 420, (0, 100, 190), (100, 100, 100), False)
+Cat(0.2, 300, 320, (0, 120, 0), (220, 130, 30), True)
+Cat(0.2, 0, 210, (0, 120, 0), (220, 130, 30), True)
+Cat(0.2, 220, 380, (0, 120, 0), (220, 130, 30), False)
+Cat(0.5, 200, 150, (0, 120, 0), (220, 130, 30), False)
+Cat(0.5, -40, 190, (0, 100, 190), (100, 100, 100), True)
+Cat(0.2, 0, 390, (0, 100, 190), (100, 100, 100), True)
+Cat(0.2, 300, 420, (0, 100, 190), (100, 100, 100), False)
 
 
 pygame.display.update()
