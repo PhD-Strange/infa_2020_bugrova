@@ -1,7 +1,6 @@
 import pygame
 from pygame.draw import *
 
-
 FPS = 30
 screen = pygame.display.set_mode((400, 500))
 
@@ -46,30 +45,20 @@ def Cat(n, x, y, eye_color, color, flipbool):
     shine2= pygame.transform.rotate(shine2, 330)
     kitty.blit(shine2, (-225, 130))
  #mouth
-    polygon(kitty, (255, 100, 100), [(95, 287), (105, 287),
-                               (100, 292)])
-    polygon(kitty, (0, 0, 0), [(95, 287), (105, 287),
-                               (100, 292)], 1)
+    polygon(kitty, (255, 100, 100), [(95, 287), (105, 287), (100, 292)])
+    polygon(kitty, (0, 0, 0), [(95, 287), (105, 287), (100, 292)], 1)
     line(kitty, (0, 0, 0), [100, 292], [100, 302], 1)
     arc(kitty, (0, 0, 0), (100, 297, 15, 10), 3.14, 6.28, 1)
     arc(kitty, (0, 0, 0), (86, 297, 15, 10), 3.14, 6.28, 1)
  #ears
-    polygon(kitty, color, [(65, 245), (90, 230),
-                               (72, 215)])
-    polygon(kitty, (0, 0, 0), [(65, 245), (90, 230),
-                               (72, 215)], 1)
-    polygon(kitty, (255, 100, 100), [(70, 237), (83, 228),
-                               (74, 225)])
-    polygon(kitty, (0, 0, 0), [(70, 237), (83, 228),
-                               (74, 225)], 1)                               
-    polygon(kitty, color, [(135, 245), (110, 230),
-                               (128, 215)])
-    polygon(kitty, (0, 0, 0), [(135, 245), (110, 230),
-                               (128, 215)], 1)
-    polygon(kitty, (255, 100, 100), [(130,237), (117,228),
-                               (126,225)])
-    polygon(kitty, (0, 0, 0), [(130,237), (117,228),
-                               (126,225)],1)                              
+    polygon(kitty, color, [(65, 245), (90, 230), (72, 215)])
+    polygon(kitty, (0, 0, 0), [(65, 245), (90, 230), (72, 215)], 1)
+    polygon(kitty, (255, 100, 100), [(70, 237), (83, 228), (74, 225)])
+    polygon(kitty, (0, 0, 0), [(70, 237), (83, 228), (74, 225)], 1)                               
+    polygon(kitty, color, [(135, 245), (110, 230), (128, 215)])
+    polygon(kitty, (0, 0, 0), [(135, 245), (110, 230), (128, 215)], 1)
+    polygon(kitty, (255, 100, 100), [(130,237), (117,228), (126,225)])
+    polygon(kitty, (0, 0, 0), [(130,237), (117,228), (126,225)],1)                              
  #whiskeys
     w1 = pygame.Surface((600, 600), pygame.SRCALPHA)
     arc(w1, (0, 0, 0), (100, 100, 200, 50), 0, 1)
@@ -119,7 +108,6 @@ def Ball(n, x, y, color, flipbool):
     balls= pygame.transform.scale(balls, (int(500*n), int(600*n)))
     screen.blit(balls, (x, y))
 
-    
 def Window(n, x, y, color1, color2):
     windows = pygame.Surface((500, 600), pygame.SRCALPHA)
     rect(windows, color1, (200, 50, 100, 160))
@@ -130,6 +118,8 @@ def Window(n, x, y, color1, color2):
     windows= pygame.transform.scale(windows, (int(500*n), int(600*n)))
     screen.blit(windows, (x, y))
 
+
+
 #background
 rect(screen, (210,179,130), (0, 0, 400, 500))
 rect(screen, (150, 130, 100), (0, 250, 400, 300))
@@ -139,6 +129,8 @@ Window (1, 0, 0, (255, 255, 255), (100, 170, 200))
 Cat(1,0 ,0 , (0, 120, 0), (220, 130, 30), False)
 #balls
 Ball(1, -100, 0, (130, 130, 220), False)
+
+
 
 pygame.display.update()
 clock = pygame.time.Clock()
