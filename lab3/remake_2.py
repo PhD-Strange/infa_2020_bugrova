@@ -16,13 +16,12 @@ balls = pygame.Surface((500, 600), pygame.SRCALPHA)
 
 def Cat(n, x, y, eye_color0, color0, flipbool):
     """
-    Функция возвращает кота с координатами (x, y), используя вспомогательные
-    функции, которые описаны ниже.
-    Цвет глаз кота задается памаметром eye_color0.
-    Цвет самого кота определяется параметром color0.
-    Функция позволяет повернуть кота на 180 градусов вокруг своей оси,
-    если задать значение True для переменной flipbool. Параметр n задает
-    размер относительно исходного размера на исходной картинке.
+    The function returns a cat with coordinates (x, y) using the auxiliary functions
+    described below. The cat's eye color is set by the "eye_color0" parameter.
+    The color of the cat itself is determined by the "color0" parameter.
+    This function allows you to rotate the cat 180 degrees around its axis
+    if you set the value "True" for the "flipbool" variable. The "n" parameter sets
+    the size is relative to the original size in the original image.
 
     """
     kitty = pygame.Surface((500, 600), pygame.SRCALPHA)
@@ -44,9 +43,9 @@ def Cat(n, x, y, eye_color0, color0, flipbool):
 
 def tail(surface1, surface2, color):
     """
-    Рисует хвост кота на surface1.
-    Цвет хвоста определяется параметром color.
-    Потом функция переносит хвост с surface1 на surface2.
+    Draws the cat's tail on "surface1".
+    The color of the tail is determined by the "color" parameter.
+    The function then moves the tail from "surface1" to "surface2".
 
     """
     ellipse(surface1, color, (100, 100, 100, 30))
@@ -57,8 +56,8 @@ def tail(surface1, surface2, color):
 
 def body(surface, color):
     """
-    Функция рисует тело кота на surface.
-    Цвет тела задается параметром color.
+    The function draws the cat's body on the "surface".
+    The body color is set by the "color" parameter.
 
     """
     ellipse(surface, color, (100, 225, 250, 125))
@@ -67,8 +66,8 @@ def body(surface, color):
 
 def back_leg(surface, color):
     """
-    Функция рисует заднюю ногу кота на surface.
-    Цвет ноги определяется параметром color.
+    The function draws the cat's back leg on the "surface".
+    The color of the foot is determined by the "color" parameter.
 
     """
     circle(surface, color, (300, 325), 40)
@@ -79,8 +78,8 @@ def back_leg(surface, color):
 
 def front_legs(surface, color):
     """
-    Функция рисует передние ноги кота на surface.
-    Цвет ног задается параметром color.
+    The function draws the cat's front legs on the "surface".
+    The color of the legs is set by the "color" parameter.
 
     """
     ellipse(surface, color, (100, 325, 80, 40))
@@ -91,8 +90,8 @@ def front_legs(surface, color):
 
 def head(surface, color):
     """
-    Функция рисует голову кота на surface.
-    Цвет задается памаретром color.
+    The function draws the cat's head on the "surface".
+    The color is set by the "color" parameter.
 
     """
     circle(surface, color, (100, 275), 50)
@@ -101,8 +100,8 @@ def head(surface, color):
 
 def eyes(surface1, surface2, surface3, eye_color):
     """
-    Функция рисует глаза кота на surface1.
-    Цвет глаз задается параметром eye_color.
+    The feature draws the cat's eyes on the "surface1".
+    The eye color is set by the "eye_color" parameter.
 
     """
     circle(surface1, eye_color, (120, 275), 16)
@@ -120,7 +119,7 @@ def eyes(surface1, surface2, surface3, eye_color):
 
 
 def mouth(surface):
-    """Функция рисует рот кота на surface."""
+    """The function draws the cat's mouth on the "surface"."""
     polygon(surface, (255, 100, 100), [(95, 287), (105, 287), (100, 292)])
     polygon(surface, (0, 0, 0), [(95, 287), (105, 287), (100, 292)], 1)
     line(surface, (0, 0, 0), [100, 292], [100, 302], 1)
@@ -130,8 +129,8 @@ def mouth(surface):
 
 def ears(surface, color):
     """
-    Функция рисует уши на surface.
-    Цвет ушей задается параметром color.
+    The function draws ears on the "surface".
+    The color of the ears is set by the "color" parameter.
 
     """
     polygon(surface, color, [(65, 245), (90, 230), (72, 215)])
@@ -146,8 +145,8 @@ def ears(surface, color):
 
 def whiskeys(surface1, surface2, surface3, surface4):
     """
-    Функция рисует усы кота. Каждый из 3 усов рисуется на своей поверхности,
-    потом сжимается и переносится на surface4.
+    The function draws the cat's whiskers. Each of the 3 whiskers is drawn on its own surface,
+    then compressed and transferred to the "surface4".
 
     """
     arc(surface1, (0, 0, 0), (100, 100, 200, 50), 0, 1)
@@ -169,11 +168,10 @@ def whiskeys(surface1, surface2, surface3, surface4):
 
 def Ball(surface, n, x, y, color, flipbool):
     """
-    Функция возвращает клубок с координатами (x, y), который отрисовывается
-    на surface. Цвет клубка задается параметром color. Направление нити
-    можно изменить, присваивая параметру flipbool значения True или False.
-    Параметр n задает размер относительно исходного размера на исходной
-    картинке.
+    The function returns a tangle with coordinates (x, y) that is drawn on the "surface".
+    The color of the tangle is set by the "color" parameter.
+    You can change the thread direction by setting the "flipbool" parameter to "True" or "False".
+    The "n" parameter sets the size relative to the original size in the original image.
 
     """
     circle(surface, color, (300, 425), 40)
@@ -199,9 +197,10 @@ def Ball(surface, n, x, y, color, flipbool):
 
 def Window(surface, n, x, y, color1, color2):
     """
-    Функция рисует окно с координатами (x, y). Цвет рамки определяется
-    параметром color1. Цвет стекол определяется параметром color2. Параметр
-    n задает размер относительно исходного размера на исходной картинке.
+    The function draws a window with coordinates (x, y).
+    The border color is determined by the "color1" parameter.
+    The color of the glass is determined by the "color2" parameter.
+    The "n" parameter sets the size relative to the original size in the original image.
 
     """
     rect(surface, color1, (200, 50, 100, 160))
@@ -215,17 +214,17 @@ def Window(surface, n, x, y, color1, color2):
 
 rect(screen, (210, 179, 130), (0, 0, 400, 500))  # Background
 rect(screen, (150, 130, 100), (0, 250, 400, 300))  # Background
-Window(1, 0, 0, (255, 255, 255), (100, 170, 200))  # Windows
-Window(1, -150, 0, (255, 255, 255), (100, 170, 200))
-Window(1, -300, 0, (255, 255, 255), (100, 170, 200))
-Window(1, 150, 0, (255, 255, 255), (100, 170, 200))
-Ball(1, -130, 0, (190, 190, 220), False)  # Balls
-Ball(0.4, 0, 100, (190, 190, 220), False)
-Ball(0.3, 0, 270, (190, 190, 220), False)
-Ball(0.6, 120, 120, (190, 190, 220), True)
-Ball(0.4, 230, 190, (190, 190, 220), True)
-Ball(0.6, 210, 185, (190, 190, 220), True)
-Ball(0.3, 180, 350, (190, 190, 220), False)
+Window(windows, 1, 0, 0, (255, 255, 255), (100, 170, 200))  # Windows
+Window(windows, 1, -150, 0, (255, 255, 255), (100, 170, 200))
+Window(windows, 1, -300, 0, (255, 255, 255), (100, 170, 200))
+Window(windows, 1, 150, 0, (255, 255, 255), (100, 170, 200))
+Ball(balls, 1, -130, 0, (190, 190, 220), False)  # Balls
+Ball(balls, 0.4, 0, 100, (190, 190, 220), False)
+Ball(balls, 0.3, 0, 270, (190, 190, 220), False)
+Ball(balls, 0.6, 120, 120, (190, 190, 220), True)
+Ball(balls, 0.4, 230, 190, (190, 190, 220), True)
+Ball(balls, 0.6, 210, 185, (190, 190, 220), True)
+Ball(balls, 0.3, 180, 350, (190, 190, 220), False)
 Cat(0.2, 300, 320, (0, 120, 0), (220, 130, 30), True)  # Cats
 Cat(0.2, 0, 210, (0, 120, 0), (220, 130, 30), True)
 Cat(0.2, 220, 380, (0, 120, 0), (220, 130, 30), False)
@@ -248,10 +247,10 @@ pygame.quit()
 
 
 """
-Что было изменено в исходном коде?
-Функция cat была разбита на несколько подфункций. Были написаны документации
-к функциям. Немного теретасовал строчки, но это не очень существенно.
-Все используемые поверхности задаются в начале, до объявления функций.
-Немного допилил PEP8 в коде.
+What was changed in the source code?
+the cat function was split into several subfunctions. Documentation
+for functions was written. I shuffled the lines a little, but it's not very significant.
+All surfaces used are set at the beginning, before declaring functions.
+I added a little bit of PEP8 in the code.
 
 """
