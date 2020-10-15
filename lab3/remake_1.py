@@ -16,12 +16,13 @@ balls = pygame.Surface((500, 600), pygame.SRCALPHA)
 
 def Cat(n, x, y, eye_color0, color0, flipbool):
     """
-    The function returns a cat with coordinates (x, y) using the auxiliary functions
-    described below. The cat's eye color is set by the "eye_color0" parameter.
-    The color of the cat itself is determined by the "color0" parameter.
-    This function allows you to rotate the cat 180 degrees around its axis
-    if you set the value "True" for the "flipbool" variable. The "n" parameter sets
-    the size is relative to the original size in the original image.
+    The function returns a cat with coordinates (x, y) using the auxiliary
+    functions described below. The cat's eye color is set by the "eye_color0"
+    parameter. The color of the cat itself is determined by the "color0"
+    parameter. This function allows you to rotate the cat 180 degrees around
+    its axis if you set the value "True" for the "flipbool" variable.
+    The "n" parameter sets the size is relative to the original size
+    in the original image.
 
     """
     kitty = pygame.Surface((500, 600), pygame.SRCALPHA)
@@ -145,8 +146,9 @@ def ears(surface, color):
 
 def whiskeys(surface1, surface2, surface3, surface4):
     """
-     The function draws the cat's whiskers. Each of the 3 whiskers is drawn on its own surface,
-    then compressed and transferred to the "surface4".
+    The function draws the cat's whiskers. Each of the 3 whiskers is
+    drawn on its own surface, then compressed and transferred to
+    the "surface4".
 
     """
     arc(surface1, (0, 0, 0), (100, 100, 200, 50), 0, 1)
@@ -168,10 +170,11 @@ def whiskeys(surface1, surface2, surface3, surface4):
 
 def Ball(surface, n, x, y, color, flipbool):
     """
-    The function returns a tangle with coordinates (x, y) that is drawn on the "surface".
-    The color of the tangle is set by the "color" parameter.
-    You can change the thread direction by setting the "flipbool" parameter to "True" or "False".
-    The "n" parameter sets the size relative to the original size in the original image.
+    The function returns a tangle with coordinates (x, y) that is drawn on
+    the "surface". The color of the tangle is set by the "color" parameter.
+    You can change the thread direction by setting the "flipbool" parameter
+    to "True" or "False". The "n" parameter sets the size relative to the
+    original size in the original image.
 
     """
     circle(surface, color, (300, 425), 40)
@@ -200,7 +203,8 @@ def Window(surface, n, x, y, color1, color2):
     The function draws a window with coordinates (x, y).
     The border color is determined by the "color1" parameter.
     The color of the glass is determined by the "color2" parameter.
-    The "n" parameter sets the size relative to the original size in the original image.
+    The "n" parameter sets the size relative to the original size in the
+    original image.
 
     """
     rect(surface, color1, (200, 50, 100, 160))
@@ -234,8 +238,8 @@ pygame.quit()
 """
 What was changed in the source code?
 the cat function was split into several subfunctions. Documentation
-for functions was written. I shuffled the lines a little, but it's not very significant.
-All surfaces used are set at the beginning, before declaring functions.
-I added a little bit of PEP8 in the code.
+for functions was written. I shuffled the lines a little, but it's not very
+significant. All surfaces used are set at the beginning, before declaring
+functions. I added a little bit of PEP8 in the code.
 
 """
